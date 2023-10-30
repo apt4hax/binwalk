@@ -90,9 +90,7 @@ function install_sasquatch
 
 function install_jefferson
 {
-    git clone --quiet --depth 1 --branch "master" https://github.com/sviehb/jefferson
-    (cd jefferson && $SUDO $PYTHON -mpip install -r requirements.txt && $SUDO $PYTHON setup.py install)
-    $SUDO rm -rf jefferson
+    pip install --user jefferson
 }
 
 function install_cramfstools
@@ -115,9 +113,7 @@ function install_cramfstools
 
 function install_ubireader
 {
-    git clone --quiet --depth 1 --branch "master" https://github.com/jrspruitt/ubi_reader
-    (cd ubi_reader && $SUDO $PYTHON setup.py install)
-    $SUDO rm -rf ubi_reader
+     pip install --user ubi_reader
 }
 
 function install_pip_package
